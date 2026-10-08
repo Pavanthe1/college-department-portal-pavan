@@ -3,144 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Department of Software Engineering</title>
+    <title>Department of Software Engineering | V2</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #eef2f7;
+            background: #f4f7fb;
             color: #172033;
+            line-height: 1.6;
         }
 
         header {
-            background: #172033;
+            background: linear-gradient(135deg, #071a35, #123f73);
             color: white;
             padding: 45px 8%;
         }
 
-        header small {
-            color: #61dafb;
-            letter-spacing: 3px;
+        .header-content {
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #2f80ed;
+            padding: 7px 15px;
+            border-radius: 20px;
+            font-size: 13px;
             font-weight: bold;
+            margin-bottom: 18px;
         }
 
-        header h1 {
+        h1 {
             font-size: 42px;
-            margin: 15px 0;
+            margin-bottom: 12px;
         }
 
-        header p {
-            max-width: 700px;
-            color: #cbd5e1;
-            line-height: 1.7;
+        .subtitle {
+            max-width: 750px;
+            color: #dcecff;
+            font-size: 17px;
+        }
+
+        .version {
+            margin-top: 20px;
+            font-size: 13px;
+            color: #9fc9ff;
         }
 
         nav {
             background: white;
             padding: 16px 8%;
-            border-bottom: 1px solid #ddd;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
         }
 
-        nav span {
-            margin-right: 30px;
-            font-weight: bold;
-            color: #334155;
-        }
-
-        .container {
-            width: 84%;
+        nav div {
             max-width: 1150px;
-            margin: 35px auto;
+            margin: auto;
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
         }
 
-        .intro {
-            background: white;
-            padding: 30px;
-            border-left: 6px solid #2563eb;
+        nav a {
+            text-decoration: none;
+            color: #173b68;
+            font-weight: 600;
+        }
+
+        main {
+            max-width: 1150px;
+            margin: 45px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        .section-title {
+            font-size: 28px;
+            color: #123f73;
+            margin-bottom: 10px;
+        }
+
+        .section-intro {
+            color: #64748b;
             margin-bottom: 25px;
         }
 
-        .intro h2 {
-            margin-bottom: 12px;
-        }
-
-        .intro p {
-            line-height: 1.7;
-            color: #536174;
-        }
-
-        .grid {
+        .cards {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
         }
 
         .card {
             background: white;
-            padding: 28px;
-            border-radius: 12px;
-            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(15, 40, 70, 0.08);
+            border-left: 4px solid #2f80ed;
         }
 
         .card h3 {
-            color: #2563eb;
-            margin-bottom: 18px;
+            color: #163f70;
+            margin-bottom: 8px;
         }
 
-        .card ul {
-            list-style: none;
+        .card p {
+            color: #64748b;
+            font-size: 14px;
         }
 
-        .card li {
-            padding: 9px 0;
-            border-bottom: 1px solid #edf0f4;
+        .faculty-card {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 5px 18px rgba(15, 40, 70, 0.08);
         }
 
-        .faculty {
+        .avatar {
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            background: #123f73;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .faculty-card h3 {
+            font-size: 16px;
+            color: #173b68;
+        }
+
+        .faculty-card p {
+            color: #718096;
+            font-size: 13px;
+        }
+
+        .labs {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 18px;
         }
 
-        .faculty div {
-            background: #f1f5f9;
-            padding: 15px;
-            border-radius: 8px;
+        .lab {
+            background: #eaf3ff;
+            padding: 22px;
+            border-radius: 12px;
+        }
+
+        .lab h3 {
+            color: #123f73;
+            margin-bottom: 6px;
+        }
+
+        .lab p {
+            color: #52657d;
+            font-size: 14px;
+        }
+
+        .highlights {
+            background: #123f73;
+            color: white;
+            padding: 30px;
+            border-radius: 16px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .highlight {
+            text-align: center;
+        }
+
+        .highlight strong {
+            display: block;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+
+        .highlight span {
+            color: #cfe4ff;
+            font-size: 14px;
         }
 
         .contact {
-            margin-top: 25px;
-            background: #2563eb;
-            color: white;
+            background: white;
             padding: 30px;
-            border-radius: 12px;
+            border-radius: 15px;
+            box-shadow: 0 5px 18px rgba(15, 40, 70, 0.08);
         }
 
         .contact p {
             margin: 8px 0;
+            color: #52657d;
         }
 
         footer {
+            background: #071a35;
+            color: #b9c9dc;
             text-align: center;
             padding: 25px;
-            color: #64748b;
             font-size: 13px;
         }
 
-        @media (max-width: 750px) {
-            .grid,
-            .faculty {
-                grid-template-columns: 1fr;
+        @media (max-width: 700px) {
+            h1 {
+                font-size: 30px;
             }
 
-            header h1 {
-                font-size: 32px;
+            header {
+                padding: 35px 6%;
+            }
+
+            nav {
+                padding: 14px 6%;
             }
         }
     </style>
@@ -149,89 +241,189 @@
 <body>
 
 <header>
-    <small>ACADEMIC DEPARTMENT PORTAL</small>
-    <h1>Department of Software Engineering</h1>
-    <p>
-        Empowering students with modern software development practices,
-        engineering principles, artificial intelligence and emerging
-        technologies.
-    </p>
+    <div class="header-content">
+        <span class="tag">COLLEGE DEPARTMENT PORTAL</span>
+
+        <h1>Department of Software Engineering — V2</h1>
+
+        <p class="subtitle">
+            Empowering students through software development, intelligent systems,
+            cloud technologies and modern engineering practices.
+        </p>
+
+        <p class="version">
+            Updated Department Information Portal • Academic Year 2026
+        </p>
+    </div>
 </header>
 
 <nav>
-    <span>Department</span>
-    <span>Faculty</span>
-    <span>Programs</span>
-    <span>Laboratories</span>
-    <span>Contact</span>
+    <div>
+        <a href="#programs">Programs</a>
+        <a href="#faculty">Faculty</a>
+        <a href="#labs">Laboratories</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#contact">Contact</a>
+    </div>
 </nav>
 
-<div class="container">
+<main>
 
-    <section class="intro">
-        <h2>About the Department</h2>
-        <p>
-            The Department of Software Engineering focuses on developing
-            industry-ready professionals through technical education,
-            practical learning, research and innovative software projects.
+    <section id="programs">
+        <h2 class="section-title">Programs Offered</h2>
+
+        <p class="section-intro">
+            The department provides industry-oriented programs that combine
+            software engineering fundamentals with emerging technologies.
         </p>
-    </section>
 
-    <div class="grid">
+        <div class="cards">
 
-        <section class="card">
-            <h3>Programs Offered</h3>
-            <ul>
-                <li>M.Tech Software Engineering</li>
-                <li>Software Engineering Specialization</li>
-                <li>Advanced Software Development</li>
-                <li>Artificial Intelligence and GenAI</li>
-            </ul>
-        </section>
-
-        <section class="card">
-            <h3>Faculty</h3>
-            <div class="faculty">
-                <div>Dr. Ananya Rao<br><small>Professor</small></div>
-                <div>Dr. Kiran Kumar<br><small>Associate Professor</small></div>
-                <div>Dr. Meera Nair<br><small>Assistant Professor</small></div>
-                <div>Dr. Arjun Sharma<br><small>Assistant Professor</small></div>
+            <div class="card">
+                <h3>B.Tech Software Engineering</h3>
+                <p>
+                    Undergraduate program covering programming, databases,
+                    software engineering, operating systems and application development.
+                </p>
             </div>
-        </section>
 
-        <section class="card">
-            <h3>Laboratories</h3>
-            <ul>
-                <li>Software Engineering Laboratory</li>
-                <li>Cloud Computing Laboratory</li>
-                <li>Artificial Intelligence Laboratory</li>
-                <li>Cybersecurity Laboratory</li>
-                <li>DevOps and Automation Laboratory</li>
-            </ul>
-        </section>
+            <div class="card">
+                <h3>M.Tech Software Engineering</h3>
+                <p>
+                    Advanced study in software architecture, testing,
+                    cloud computing, artificial intelligence and research.
+                </p>
+            </div>
 
-        <section class="card">
-            <h3>Department Highlights</h3>
-            <ul>
-                <li>Industry-oriented curriculum</li>
-                <li>Project-based learning</li>
-                <li>Research and innovation activities</li>
-                <li>Technical workshops and seminars</li>
-                <li>Student development programs</li>
-            </ul>
-        </section>
+            <div class="card">
+                <h3>Industry Certification</h3>
+                <p>
+                    Skill-focused learning in DevOps, cloud platforms,
+                    cybersecurity and modern software development tools.
+                </p>
+            </div>
 
-    </div>
-
-    <section class="contact">
-        <h2>Contact Information</h2>
-        <p>📍 School of Computing Sciences</p>
-        <p>📧 softwareengineering@university.edu</p>
-        <p>☎ +91 44 2345 6789</p>
-        <p>🌐 Department Office — Block C, Academic Campus</p>
+        </div>
     </section>
 
-</div>
+    <section id="faculty">
+        <h2 class="section-title">Faculty</h2>
+
+        <p class="section-intro">
+            Experienced faculty members guide students in academics,
+            research and technology-driven projects.
+        </p>
+
+        <div class="cards">
+
+            <div class="faculty-card">
+                <div class="avatar">AK</div>
+                <div>
+                    <h3>Dr. Anil Kumar</h3>
+                    <p>Professor • Software Engineering</p>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="avatar">SR</div>
+                <div>
+                    <h3>Dr. Sneha Reddy</h3>
+                    <p>Associate Professor • AI & Cloud Computing</p>
+                </div>
+            </div>
+
+            <div class="faculty-card">
+                <div class="avatar">VM</div>
+                <div>
+                    <h3>Dr. Vikram Mehta</h3>
+                    <p>Assistant Professor • Software Testing</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="labs">
+        <h2 class="section-title">Laboratories</h2>
+
+        <div class="labs">
+
+            <div class="lab">
+                <h3>Software Engineering Lab</h3>
+                <p>
+                    Practical environment for software design,
+                    development and project management.
+                </p>
+            </div>
+
+            <div class="lab">
+                <h3>Cloud & DevOps Lab</h3>
+                <p>
+                    Hands-on experience with containers,
+                    CI/CD pipelines and cloud deployment.
+                </p>
+            </div>
+
+            <div class="lab">
+                <h3>AI & Data Lab</h3>
+                <p>
+                    Supports machine learning, data analytics
+                    and intelligent application development.
+                </p>
+            </div>
+
+            <div class="lab">
+                <h3>Testing & Automation Lab</h3>
+                <p>
+                    Dedicated environment for software testing,
+                    automation and quality engineering.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="highlights">
+        <h2 class="section-title">Department Highlights</h2>
+
+        <div class="highlights">
+
+            <div class="highlight">
+                <strong>12+</strong>
+                <span>Faculty Members</span>
+            </div>
+
+            <div class="highlight">
+                <strong>4</strong>
+                <span>Academic Programs</span>
+            </div>
+
+            <div class="highlight">
+                <strong>6</strong>
+                <span>Specialized Labs</span>
+            </div>
+
+            <div class="highlight">
+                <strong>25+</strong>
+                <span>Student Projects</span>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Contact Information</h2>
+
+        <div class="contact">
+            <p><strong>Department:</strong> Department of Software Engineering</p>
+            <p><strong>Institution:</strong> VIT University</p>
+            <p><strong>Email:</strong> softwareengineering@college.edu</p>
+            <p><strong>Phone:</strong> +91 98765 43210</p>
+            <p><strong>Office:</strong> Academic Block, Software Engineering Department</p>
+        </div>
+    </section>
+
+</main>
 
 <footer>
     © 2026 Department of Software Engineering | College Department Information Portal
