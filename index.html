@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Department of Software Engineering</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #eef2f7;
+            color: #172033;
+        }
+
+        header {
+            background: #172033;
+            color: white;
+            padding: 45px 8%;
+        }
+
+        header small {
+            color: #61dafb;
+            letter-spacing: 3px;
+            font-weight: bold;
+        }
+
+        header h1 {
+            font-size: 42px;
+            margin: 15px 0;
+        }
+
+        header p {
+            max-width: 700px;
+            color: #cbd5e1;
+            line-height: 1.7;
+        }
+
+        nav {
+            background: white;
+            padding: 16px 8%;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav span {
+            margin-right: 30px;
+            font-weight: bold;
+            color: #334155;
+        }
+
+        .container {
+            width: 84%;
+            max-width: 1150px;
+            margin: 35px auto;
+        }
+
+        .intro {
+            background: white;
+            padding: 30px;
+            border-left: 6px solid #2563eb;
+            margin-bottom: 25px;
+        }
+
+        .intro h2 {
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            line-height: 1.7;
+            color: #536174;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+        }
+
+        .card h3 {
+            color: #2563eb;
+            margin-bottom: 18px;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card li {
+            padding: 9px 0;
+            border-bottom: 1px solid #edf0f4;
+        }
+
+        .faculty {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .faculty div {
+            background: #f1f5f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .contact {
+            margin-top: 25px;
+            background: #2563eb;
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .contact p {
+            margin: 8px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #64748b;
+            font-size: 13px;
+        }
+
+        @media (max-width: 750px) {
+            .grid,
+            .faculty {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <small>ACADEMIC DEPARTMENT PORTAL</small>
+    <h1>Department of Software Engineering</h1>
+    <p>
+        Empowering students with modern software development practices,
+        engineering principles, artificial intelligence and emerging
+        technologies.
+    </p>
+</header>
+
+<nav>
+    <span>Department</span>
+    <span>Faculty</span>
+    <span>Programs</span>
+    <span>Laboratories</span>
+    <span>Contact</span>
+</nav>
+
+<div class="container">
+
+    <section class="intro">
+        <h2>About the Department</h2>
+        <p>
+            The Department of Software Engineering focuses on developing
+            industry-ready professionals through technical education,
+            practical learning, research and innovative software projects.
+        </p>
+    </section>
+
+    <div class="grid">
+
+        <section class="card">
+            <h3>Programs Offered</h3>
+            <ul>
+                <li>M.Tech Software Engineering</li>
+                <li>Software Engineering Specialization</li>
+                <li>Advanced Software Development</li>
+                <li>Artificial Intelligence and GenAI</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>Faculty</h3>
+            <div class="faculty">
+                <div>Dr. Ananya Rao<br><small>Professor</small></div>
+                <div>Dr. Kiran Kumar<br><small>Associate Professor</small></div>
+                <div>Dr. Meera Nair<br><small>Assistant Professor</small></div>
+                <div>Dr. Arjun Sharma<br><small>Assistant Professor</small></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h3>Laboratories</h3>
+            <ul>
+                <li>Software Engineering Laboratory</li>
+                <li>Cloud Computing Laboratory</li>
+                <li>Artificial Intelligence Laboratory</li>
+                <li>Cybersecurity Laboratory</li>
+                <li>DevOps and Automation Laboratory</li>
+            </ul>
+        </section>
+
+        <section class="card">
+            <h3>Department Highlights</h3>
+            <ul>
+                <li>Industry-oriented curriculum</li>
+                <li>Project-based learning</li>
+                <li>Research and innovation activities</li>
+                <li>Technical workshops and seminars</li>
+                <li>Student development programs</li>
+            </ul>
+        </section>
+
+    </div>
+
+    <section class="contact">
+        <h2>Contact Information</h2>
+        <p>📍 School of Computing Sciences</p>
+        <p>📧 softwareengineering@university.edu</p>
+        <p>☎ +91 44 2345 6789</p>
+        <p>🌐 Department Office — Block C, Academic Campus</p>
+    </section>
+
+</div>
+
+<footer>
+    © 2026 Department of Software Engineering | College Department Information Portal
+</footer>
+
+</body>
+</html>
